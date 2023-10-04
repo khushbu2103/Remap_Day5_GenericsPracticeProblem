@@ -51,7 +51,7 @@ namespace Remap_Day5_GenericsPracticeProblem
             }
             if (!existNum)
             {
-                Console.WriteLine("No such number exist in the given array");
+                Console.WriteLine("No such decimal number exist in the given array");
                 return arr;
             }
             for (int i = 0; i < len; i++)
@@ -80,7 +80,7 @@ namespace Remap_Day5_GenericsPracticeProblem
             }
             if (!existNum)
             {
-                Console.WriteLine("No such number exist in the given array");
+                Console.WriteLine("No such character exist in the given array");
                 return arr;
             }
             for (int i = 0; i < len; i++)

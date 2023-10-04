@@ -47,7 +47,7 @@
     <Compile Include="DeleteArray.cs" />
     <Compile Include="DeleteElementUsingGenericClass.cs" />
     <Compile Include="DeleteElementUsingGenericmethod.cs" />
-    <Compile Include="MaximumString.cs" />
+    <Compile Include="MinimumString.cs" />
     <Compile Include="MinimumFloat.cs" />
     <Compile Include="MinimumInteger.cs" />
     <Compile Include="Program.cs" />

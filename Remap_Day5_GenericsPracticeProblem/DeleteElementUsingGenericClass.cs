@@ -24,7 +24,7 @@ namespace Remap_Day5_GenericsPracticeProblem
             }
             if (!existNum)
             {
-                Console.WriteLine("No such number exist in the given array");
+                Console.WriteLine("No such value({0}) exist in the given array", num);
                 return arr;
             }
             for (int i = 0; i < len; i++)

@@ -21,58 +21,40 @@ namespace Remap_Day5_GenericsPracticeProblem
                 "7. Find minimum by generic method.\n" +
                 "8. Find minimum by generic class");
             int option = Convert.ToInt32(Console.ReadLine());
+            int[] intArr = { 1, 2, 3 };
+            double[] doubleArr = { 20.67, 56.32, 23.98 };
+            char[] charArr = { 'a', 'b', 'c', 'd' };
+            Console.WriteLine("enter the number you want to delete from array");
+            int intInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the decimal value you want to delete from array");
+            double doubleInput = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter the char value you want to delete from array");
+            char charInput = Convert.ToChar(Console.ReadLine());
             switch (option)
             {
                 case 1:
-                    int[] arr = { 1, 2, 3 };
-                    double[] doubles = { 20.67, 56.32, 23.98 };
-                    char[] chars = { 'a', 'b', 'c', 'd'};
-                    Console.WriteLine("enter the number you want to delete from array");
-                    int num = Convert.ToInt32(Console.ReadLine());
-                    arr = DeleteArray.DeleteMethod(arr, num);
-                    Console.WriteLine("enter the decimal value you want to delete from array");
-                    double numb= Convert.ToDouble(Console.ReadLine());
-                    doubles = DeleteArray.DeleteMethod(doubles, numb);
-                    Console.WriteLine("enter the char value you want to delete from array");
-                    char number = Convert.ToChar(Console.ReadLine());
-                    chars = DeleteArray.DeleteMethod(chars, number);
-                    ArrayOfIntDoubleAndChar.ToPrint(arr);
-                    ArrayOfIntDoubleAndChar.ToPrint(doubles);
-                    ArrayOfIntDoubleAndChar.ToPrint(chars);
+                    intArr = DeleteArray.DeleteMethod(intArr, intInput);
+                    doubleArr = DeleteArray.DeleteMethod(doubleArr, doubleInput);
+                    charArr = DeleteArray.DeleteMethod(charArr, charInput);
+                    ArrayOfIntDoubleAndChar.ToPrint(intArr);
+                    ArrayOfIntDoubleAndChar.ToPrint(doubleArr);
+                    ArrayOfIntDoubleAndChar.ToPrint(charArr);
                     break;
                 case 2:
-                    int[] arr2 = { 1, 2, 3 };
-                    double[] doubles2 = { 20.67, 56.32, 23.98 };
-                    char[] chars2 = { 'a', 'b', 'c', 'd' };
-                    Console.WriteLine("enter the number you want to delete from array");
-                    int num2 = Convert.ToInt32(Console.ReadLine());
-                    arr2 = DeleteArray.DeleteMethod(arr2, num2);
-                    Console.WriteLine("enter the decimal value you want to delete from array");
-                    double number1 = Convert.ToDouble(Console.ReadLine());
-                    doubles2 = DeleteArray.DeleteMethod(doubles2, number1);
-                    Console.WriteLine("enter the char value you want to delete from array");
-                    char number2 = Convert.ToChar(Console.ReadLine());
-                    chars2 = DeleteArray.DeleteMethod(chars2, number2);
-                    ArrayOfIntDoubleAndChar.ToPrint(arr2);
-                    ArrayOfIntDoubleAndChar.ToPrint(doubles2);
-                    ArrayOfIntDoubleAndChar.ToPrint(chars2);
+                    intArr = DeleteElementUsingGenericmethod.DeleteMethod(intArr, intInput);
+                    doubleArr = DeleteElementUsingGenericmethod.DeleteMethod(doubleArr, doubleInput);
+                    charArr = DeleteElementUsingGenericmethod.DeleteMethod(charArr, charInput);
+                    ArrayOfIntDoubleAndChar.ToPrint(intArr);
+                    ArrayOfIntDoubleAndChar.ToPrint(doubleArr);
+                    ArrayOfIntDoubleAndChar.ToPrint(charArr);
                     break;
                 case 3:
-                    int[] arr3 = { 1, 2, 3 };
-                    double[] doubles3 = { 20.67, 56.32, 23.98 };
-                    char[] chars3 = { 'a', 'b', 'c', 'd' };
-                    Console.WriteLine("enter the number you want to delete from array");
-                    int num3 = Convert.ToInt32(Console.ReadLine());
-                    arr3 = DeleteArray.DeleteMethod(arr3, num3);
-                    Console.WriteLine("enter the decimal value you want to delete from array");
-                    double number3 = Convert.ToDouble(Console.ReadLine());
-                    doubles3 = DeleteArray.DeleteMethod(doubles3, number3);
-                    Console.WriteLine("enter the char value you want to delete from array");
-                    char number4 = Convert.ToChar(Console.ReadLine());
-                    chars3 = DeleteArray.DeleteMethod(chars3, number4);
-                    ArrayOfIntDoubleAndChar.ToPrint(arr3);
-                    ArrayOfIntDoubleAndChar.ToPrint(doubles3);
-                    ArrayOfIntDoubleAndChar.ToPrint(chars3);
+                    intArr = DeleteElementUsingGenericClass<int>.DeleteMethod(intArr, intInput);
+                    doubleArr = DeleteElementUsingGenericClass<double>.DeleteMethod(doubleArr, doubleInput);
+                    charArr = DeleteElementUsingGenericClass<char>.DeleteMethod(charArr, charInput);
+                    ArrayOfIntDoubleAndChar.ToPrint(intArr);
+                    ArrayOfIntDoubleAndChar.ToPrint(doubleArr);
+                    ArrayOfIntDoubleAndChar.ToPrint(charArr);
                     break;
                 case 4:
                     Console.WriteLine("Enter 3 numbers");
@@ -90,7 +72,7 @@ namespace Remap_Day5_GenericsPracticeProblem
                     break;
                 case 6:
                     //string x = "abc", y = "hgf", z = "kgy";
-                    MaximumString.FindMinimumString("abc", "bcd", "khu");
+                    MinimumString.FindMinimumString("abc", "bcd", "khu");
                     break;
                 case 7:
                     RefactorToGenericMethod<int>.MinimumValueByGenerics(21, 31, 78);

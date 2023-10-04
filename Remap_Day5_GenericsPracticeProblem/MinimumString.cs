@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Remap_Day5_GenericsPracticeProblem
 {
-    internal class MaximumString
+    internal class MinimumString
     {
         public static void FindMinimumString(string x, string y, string z)
         {
